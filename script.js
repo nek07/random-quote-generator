@@ -5,8 +5,8 @@ $(document).ready(function(){
         author: "Franklin D. Roosevelt",
         color: '#676694'
     },        {
-        text: "The only limit to our realization of tomorrow will be our doubts of today.",
-        author: "Franklin D. Roosevelt",
+        text: "Memories warm you up from the inside. But they also tear you apart.",
+        author: "Haruki Murakami",
         color: '#7752FE'
     },
     {
@@ -54,19 +54,19 @@ $(document).ready(function(){
         author: "Nelson Mandela",
         color: '#676694'
     },    {
-        text: "You miss 100% of the shots you don't take.",
-        author: "Wayne Gretzky",
+        text: "In the ring, there is no tomorrow. You give it your all today, for today is all you have.",
+        author: "Rocky IV",
         color: '#20B2AA'
     },
     {
         text: "It's not whether you get knocked down, it's whether you get up.",
         author: "Vince Lombardi",
-        color: '#FF4500'
+        color: '#F9B572'
     },
     {
         text: "The difference between a successful person and others is not a lack of strength, not a lack of knowledge, but rather a lack in will.",
         author: "Vince Lombardi",
-        color: '#FF4500'
+        color: '#7752FE'
     },
     {
         text: "You have within you right now, everything you need to deal with whatever the world can throw at you.",
