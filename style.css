@@ -1,9 +1,10 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     margin: 0;
     font-size: 62.5%;
 }
@@ -35,17 +36,29 @@ button {
 
 .share {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start
+    justify-content: flex-start;
+    align-items:start;
+    transition: all 0.2s ease;
 }
+
 .font {
     font-weight: 500;
 }
 .share-quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:none;
+    padding:0.5rem;
+    margin: 0;
+}
 
-    width: 100%;
-   
-    height: 100%;
+
+#inst-quote {
+    margin-left:-13%;
+}
+#tweet-quote {
+    margin-left:-15%;
 }
 .share {
     border: none;
@@ -54,6 +67,10 @@ button {
     height: 100%;
     border:none;
     color: white;
+    transition: all 0.2s ease;
+}
+#new-quote:hover {
+    filter: brightness(115%);
 }
 .buttons {
     font-size: 1rem;
@@ -61,6 +78,14 @@ button {
     justify-content: space-between;
     align-items: center;
     
-
 }
 
+.share-quote:hover{
+    filter: brightness(115%);
+}
+
+p {
+    color:white;
+    margin-top: 10%;
+    font-size: 0.6rem;
+}
