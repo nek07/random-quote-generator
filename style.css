@@ -10,7 +10,9 @@ body {
 }
 
 #quote-box {
-    width: 430px;
+    
+    min-width: 410px;
+    max-width: 450px;
     height: auto;
     background-color: white;
     

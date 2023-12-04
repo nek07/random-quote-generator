@@ -67,7 +67,7 @@ $(document).ready(function () {
     function setContent(content) {
         $("#text").html("<iconify-icon style='font-size: 1.6rem;' icon='bi:quote'></iconify-icon>" + content);
     }
-    function setAuthorName(authorName){
+    function setAuthorName(authorName) {
         $("#author").html(" - " + authorName);
     }
 
