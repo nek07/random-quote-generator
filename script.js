@@ -20,7 +20,7 @@ $(document).ready(function () {
         '#8A2BE2',
         '#9370DB',
         '#BDB76B',
-        '#FF5B22FF6347',
+        '#FF5B22',
         '#FF6347',
         '#008B8B',
         '#C683D7',
@@ -33,38 +33,38 @@ $(document).ready(function () {
         '#BDB76B',
         '#8A2BE2'
     ];
+    $("#new-quote").click(function () {
+        fetchHandler()
+        cardColor()
+    })
 
-    
 
     function getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+        return Math.floor(Math.random() * (max - min) + min);
     }
     async function fetchHandler() {
         try {
             const response = await fetch('https://api.quotable.io/random')
             const quote = await response.json()
+            console.log(response.json)
             $("#author").html(" - " + quote.author);
             $("#text").html("<iconify-icon style='font-size: 1.6rem;' icon='bi:quote'></iconify-icon>" + quote.content);
         } catch (err) {
-            console.log(error);
+            console.log(err);
         }
     }
-    fetchHandler()
 
-    $("#new-quote").click(function () {
-        fetchHandler()
-        cardColor()
-    })
-    
     function cardColor() {
-    let randomIndex = getRandomInt(0, color.length);
-    $("#text").css('color', color[randomIndex])
-    $("#author").css('color', color[randomIndex])
-    $(".share-quote").css('background-color', color[randomIndex])
-    $("#new-quote").css('background-color', color[randomIndex])
-    $("body").css('background-color', color[randomIndex])
+        let randomIndex = getRandomInt(0, color.length);
+        $("#text").css('color', color[randomIndex])
+        $("#author").css('color', color[randomIndex])
+        $(".share-quote").css('background-color', color[randomIndex])
+        $("#new-quote").css('background-color', color[randomIndex])
+        $("body").css('background-color', color[randomIndex])
     }
-    
+
+    fetchHandler()
+    cardColor()
 });
