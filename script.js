@@ -49,8 +49,8 @@ $(document).ready(function () {
             const response = await fetch('https://api.quotable.io/random')
             const quote = await response.json()
             console.log(response.json)
-            $("#author").html(" - " + quote.author);
-            $("#text").html("<iconify-icon style='font-size: 1.6rem;' icon='bi:quote'></iconify-icon>" + quote.content);
+            setAuthorName(quote.author);
+            setContent(quote.content);
         } catch (err) {
             console.log(err);
         }
@@ -63,6 +63,12 @@ $(document).ready(function () {
         $(".share-quote").css('background-color', color[randomIndex])
         $("#new-quote").css('background-color', color[randomIndex])
         $("body").css('background-color', color[randomIndex])
+    }
+    function setContent(content) {
+        $("#text").html("<iconify-icon style='font-size: 1.6rem;' icon='bi:quote'></iconify-icon>" + content);
+    }
+    function setAuthorName(authorName){
+        $("#author").html(" - " + authorName);
     }
 
     fetchHandler()
